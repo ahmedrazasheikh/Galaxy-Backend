@@ -18,7 +18,6 @@ app.get('/', (req, res) => {
 app.post('/api/v1/contact', async (req, res) => {
   try {
     const contactData = req.body;
-    console.log(contactData)
     const newContact = new Contact(contactData);
     await newContact.save();
     res.status(201).json(newContact);
