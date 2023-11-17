@@ -7,7 +7,7 @@ const port = 8000;
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://worldwidetours.co", "*"],
+    origin: ["https://galaxy-digital-solutions.vercel.app", "*"],
     credentials: true,
   })
 );
