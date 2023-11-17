@@ -20,7 +20,7 @@ const contactSchema = new mongoose.Schema({
   
  export const Trip = mongoose.model('Trip', tripSchema);  
 
-mongoose.connect(mongodbURI);
+ mongoose.connect(mongodbURI, { useNewUrlParser: true, useUnifiedTopology: true });
 ////////////////mongodb connected disconnected events///////////////////////////////////////////////
 mongoose.connection.on('connected', function () {//connected
     console.log("Mongoose is connected");
@@ -36,11 +36,12 @@ mongoose.connection.on('error', function (err) {//any error
     process.exit(1);
 });
 
-process.on('SIGINT', function () {/////this function will run jst before app is closing
+process.on('SIGINT', function () {
     console.log("app is terminating");
     mongoose.connection.close(function () {
         console.log('Mongoose default connection closed');
         process.exit(0);
     });
 });
+
 ////////////////mongodb connected disconnected events///////////////////////////////////////////////
