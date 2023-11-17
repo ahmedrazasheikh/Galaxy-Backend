@@ -22,6 +22,7 @@ app.post('/api/v1/contact', async (req, res) => {
     await newContact.save();
     res.status(201).json(newContact);
   } catch (error) {
+    console.log(error)
     res.status(500).json({ error: 'Could not create contact' });
   }
 });
