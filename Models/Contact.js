@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-const mongodbURI = process.env.mongodbURI || "mongodb+srv://galaxysolutionsincorporated:galaxysolutionsincorporated@cluster0.tlxtt8v.mongodb.net/";
+const mongodbURI = process.env.mongodbURI || "mongodb+srv://galaxysolutionsincorporated:ahmed@cluster0.tlxtt8v.mongodb.net/";
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
 const contactSchema = new mongoose.Schema({
