@@ -7,7 +7,7 @@ const port = 8000;
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://galaxy-digital-solutions.vercel.app", "*"],
+    origin: ["https://galaxy-digital-solutions.vercel.app", "https://persnol-portfolio.vercel.app",  "*"],
     credentials: true,
   })
 );
