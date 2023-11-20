@@ -9,7 +9,7 @@ app.use(
   cors({
     origin: [
       "https://galaxy-digital-solutions.vercel.app",
-      "https://persnol-portfolio.vercel.app",
+      "https://ahmed-raza.vercel.app",
       "*"
     ],
     credentials: true,
