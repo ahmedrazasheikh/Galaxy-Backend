@@ -7,10 +7,15 @@ const port = 8000;
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://galaxy-digital-solutions.vercel.app", "https://persnol-portfolio.vercel.app",  "*"],
+    origin: [
+      "https://galaxy-digital-solutions.vercel.app",
+      "https://persnol-portfolio.vercel.app",
+      "*"
+    ],
     credentials: true,
   })
 );
+
 // Define a route
 app.get('/', (req, res) => {
   res.send('Hello, Express!');
